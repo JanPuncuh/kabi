@@ -4,13 +4,7 @@ import {Product} from "@/types";
 
 export default function Index({products}: { products: Product[] }) {
     return (
-        <AuthenticatedLayout
-            header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                    Dashboard
-                </h2>
-            }
-        >
+        <AuthenticatedLayout>
             <Head title="Izdelki"/>
 
             <div className="py-12">
