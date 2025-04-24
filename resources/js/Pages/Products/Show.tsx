@@ -8,7 +8,7 @@ export default function Show({product}: { product: Product }) {
 
     return (
         <AuthenticatedLayout>
-            <Head title="Izdelki"/>
+            <Head title={product.name}/>
 
             <div className="py-[30px]">
                 <div className="mx-auto w-4/5">
@@ -22,10 +22,10 @@ export default function Show({product}: { product: Product }) {
                             <h5 className="text-2xl text-kabi-black font-bold uppercase">{product.name}</h5>
                             <h6 className="text-xl text-kabi-gray">{product.subtitle}</h6>
                             <p className="text-xs text-kabi-gray whitespace-pre-wrap mt-5">
-                                {/*{product.description}*/}
-                                {'Odstavek 1. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.\n' +
-                                    '\n' +
-                                    'Odstavek 2. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'}
+                                {product.description}
+                                {/*{'Odstavek 1. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.\n' +*/}
+                                {/*    '\n' +*/}
+                                {/*    'Odstavek 2. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'}*/}
                             </p>
 
                             <Link
