@@ -1,8 +1,9 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import {Head, Link} from '@inertiajs/react';
+import {Head} from '@inertiajs/react';
 import {Product} from "@/types";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import ProductLink from "@/Components/ProductLink";
 
 export default function Show({product}: { product: Product }) {
 
@@ -28,13 +29,10 @@ export default function Show({product}: { product: Product }) {
                                 {/*    'Odstavek 2. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'}*/}
                             </p>
 
-                            <Link
-                                href={route('product.index')}
-                                className="mt-[30px] inline-flex items-center px-[30px] py-[13px] text-kabi-blue font-bold uppercase text-xs text-center border-2 border-kabi-blue rounded"
-                            >
-                                <FontAwesomeIcon icon={faChevronLeft} strokeWidth={2} className="me-1.5"/>
+                            <ProductLink href={route('product.index')} className="mt-[30px]">
+                                <FontAwesomeIcon icon={faChevronLeft} className="me-1.5"/>
                                 Nazaj na seznam
-                            </Link>
+                            </ProductLink>
                         </div>
 
                         <div>
