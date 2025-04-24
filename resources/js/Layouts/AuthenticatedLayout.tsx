@@ -20,7 +20,7 @@ export default function Authenticated({
         <div className="min-h-screen bg-[url(/public/storage/bg.png)]">
 
             <nav className="">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto w-4/5">
 
                     <div className="py-[30px]">
                         <Link href="/">
@@ -37,33 +37,33 @@ export default function Authenticated({
                                     <FontAwesomeIcon className="text-white/[0.24]" icon={faHouse} />
                                     <NavLink
                                         style={{paddingLeft: '10px'}}
-                                        href={route('dashboard')}
+                                        href="#"
                                         active={route().current('dashboard')}
                                     >
                                         Domov
                                     </NavLink>
                                 </div>
                                 <NavLink
-                                    href={route('dashboard')}
+                                    href="#"
                                     active={route().current('dashboard')}
                                 >
                                     O nas
                                 </NavLink>
                                 <NavLink
-                                    href={route('dashboard')}
+                                    href="#"
                                     active={route().current('dashboard')}
                                 >
                                     Kontakt
                                 </NavLink>
                                 <NavLink
-                                    href={route('dashboard')}
+                                    href="#"
                                     active={route().current('dashboard')}
                                 >
                                     Pišite nam
                                 </NavLink>
                                 <NavLink
-                                    href={route('dashboard')}
-                                    active={true} // todo make dynamic
+                                    href={route('product.index')}
+                                    active={route().current('product.index')}
                                 >
                                     Izdelki
                                 </NavLink>
