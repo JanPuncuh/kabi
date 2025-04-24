@@ -29,24 +29,24 @@ export default function Index({products}: { products: Product[] }) {
                                     {/*content*/}
                                     <div className="px-8 py-5">
 
-                                            <h5>
-                                                {product.name}
-                                            </h5>
+                                        <h5>
+                                            {product.name}
+                                        </h5>
 
-                                            <h6>
-                                                {product.subtitle}
-                                            </h6>
+                                        <h6>
+                                            {product.subtitle}
+                                        </h6>
 
-                                            <p className="whitespace-pre-wrap">
-                                                {product.description}
-                                            </p>
-                                        </div>
+                                        <p className="whitespace-pre-wrap">
+                                            {product.description}
+                                        </p>
+                                    </div>
                                 </div>
 
 
                                 <div className="px-8 pb-5">
                                     <Link
-                                        href="#"
+                                        href={route('product.show', product.id)}
                                         className="inline-block px-8 py-3 text-[#5EA0E0] uppercase text-sm font-medium text-center border-2 border-[#5EA0E0] rounded-[5px]"
                                     >
                                         <FontAwesomeIcon icon={faPlus} className="me-[5px]"/>

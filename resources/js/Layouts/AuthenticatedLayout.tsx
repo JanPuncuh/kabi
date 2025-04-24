@@ -1,5 +1,4 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import {Link, usePage} from '@inertiajs/react';
@@ -63,7 +62,7 @@ export default function Authenticated({
                                 </NavLink>
                                 <NavLink
                                     href={route('product.index')}
-                                    active={route().current('product.index')}
+                                    active={route().current()!.includes('product')}
                                 >
                                     Izdelki
                                 </NavLink>
