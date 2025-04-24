@@ -47,7 +47,7 @@ export default function Index({products}: { products: Product[] }) {
                                 <div className="px-8 pb-5">
                                     <Link
                                         href={route('product.show', product.id)}
-                                        className="inline-block px-8 py-3 text-[#5EA0E0] uppercase text-sm font-medium text-center border-2 border-[#5EA0E0] rounded-[5px]"
+                                        className="inline-block px-8 py-3 text-kabi-blue uppercase text-sm font-medium text-center border-2 border-kabi-blue rounded"
                                     >
                                         <FontAwesomeIcon icon={faPlus} className="me-[5px]"/>
                                         Več o izdelku

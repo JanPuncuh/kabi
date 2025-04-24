@@ -15,6 +15,18 @@ export default {
             fontFamily: {
                 sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'kabi-black': '#262626',
+                'kabi-gray': '#686868',
+                'kabi-blue': '#5EA0E0',
+
+            },
+            fontSize: {
+                xs: ['13px', '18px'],
+            },
+            borderRadius: {
+                DEFAULT: '5px',
+            },
         },
     },
 

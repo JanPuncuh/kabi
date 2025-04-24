@@ -7,15 +7,14 @@ export default function NavLink({
     ...props
 }: InertiaLinkProps & { active: boolean }) {
 
-    // todo change font and bold font
-
     return (
         <Link
             {...props}
+            style={{textShadow: '0 1px 0 rgba(0,0,0,0.30)'}}
             className={
-                'text-white inline-flex items-center px-[24px] my-[10px] py-[3px] leading-[22px] border-r border-black/10 text-shadow-2xs ' +
+                'text-white font-bold inline-flex items-center px-[24px] my-[10px] py-[3px] leading-[22px] border-r border-black/10 text-shadow-2xs ' +
                 (active
-                    ? 'uppercase'
+                    ? 'uppercase font-extrabold'
                     : '') +
                 className
             }

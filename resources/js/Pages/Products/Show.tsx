@@ -2,7 +2,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import {Head, Link} from '@inertiajs/react';
 import {Product} from "@/types";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronLeft, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 
 export default function Show({product}: { product: Product }) {
 
@@ -14,12 +14,14 @@ export default function Show({product}: { product: Product }) {
                 <div className="mx-auto w-4/5">
 
                     <div className="flex gap-[30px]">
-                        <img className="rounded-[5px] w-fit" src={'/storage/img.png'} alt=""/>
+                        <div>
+                            <img className="rounded w-fit" src={'/storage/img.png'} alt=""/>
+                        </div>
 
-                        <div className="relative flex-1">
-                            <h5 className="text-2xl text-[#262626]">{product.name}</h5>
-                            <h6 className="text-xl text-[#686868]">{product.subtitle}</h6>
-                            <p className="text-[13px] leading-[18px] text-[#686868] whitespace-pre-wrap mt-5">
+                        <div className="flex-1">
+                            <h5 className="text-2xl text-kabi-black font-bold uppercase">{product.name}</h5>
+                            <h6 className="text-xl text-kabi-gray">{product.subtitle}</h6>
+                            <p className="text-xs text-kabi-gray whitespace-pre-wrap mt-5">
                                 {/*{product.description}*/}
                                 {'Odstavek 1. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.\n' +
                                     '\n' +
@@ -28,7 +30,7 @@ export default function Show({product}: { product: Product }) {
 
                             <Link
                                 href={route('product.index')}
-                                className="absolute mt-[30px] inline-flex items-center px-[30px] py-3 text-[#5EA0E0] uppercase text-sm font-medium text-center border-2 border-[#5EA0E0] rounded-[5px]"
+                                className="mt-[30px] inline-flex items-center px-[30px] py-[13px] text-kabi-blue font-bold uppercase text-xs text-center border-2 border-kabi-blue rounded"
                             >
                                 <FontAwesomeIcon icon={faChevronLeft} strokeWidth={2} className="me-1.5"/>
                                 Nazaj na seznam

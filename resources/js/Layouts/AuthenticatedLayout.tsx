@@ -28,14 +28,14 @@ export default function Authenticated({
                     </div>
 
                     <div
-                        className="flex justify-between border-t-[3px] border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] rounded-[5px]">
+                        className="flex justify-between border-t-[3px] border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] rounded">
                         <div className="flex">
 
                             <div className="hidden sm:-my-px sm:flex ms-4">
                                 <div>
                                     <FontAwesomeIcon className="text-white/[0.24]" icon={faHouse} />
                                     <NavLink
-                                        style={{paddingLeft: '10px'}}
+                                        className="ps-[10px]"
                                         href="#"
                                         active={route().current('dashboard')}
                                     >
