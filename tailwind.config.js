@@ -28,6 +28,10 @@ export default {
                 DEFAULT: '5px',
             },
         },
+        screens: {
+            'sm': '500px',
+            // => @media (min-width: 500px) { ... }
+        }
     },
 
     plugins: [forms],

@@ -19,19 +19,18 @@ export default function Authenticated({
         <div className="min-h-screen bg-[url(/public/storage/bg.png)]">
 
             <nav className="">
-                <div className="mx-auto w-4/5">
+                <div className="mx-auto w-full sm:w-4/5">
 
-                    <div className="py-[30px]">
+                    <div className="hidden sm:block py-[30px]">
                         <Link href="/">
                             <ApplicationLogo className="block h-[60px] w-auto"/>
                         </Link>
                     </div>
 
                     <div
-                        className="flex justify-between border-t-[3px] border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] rounded">
-                        <div className="flex">
+                        className="py-3 sm:py-0 sm:border-t-[3px] sm:border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] sm:rounded">
 
-                            <div className="hidden sm:-my-px sm:flex ms-4">
+                        <div className="hidden sm:-my-px sm:flex ms-4">
                                 <div>
                                     <FontAwesomeIcon className="text-white/[0.24]" icon={faHouse} />
                                     <NavLink
@@ -67,16 +66,21 @@ export default function Authenticated({
                                     Izdelki
                                 </NavLink>
                             </div>
-                        </div>
 
-                        <div className="-me-2 flex items-center sm:hidden">
+                        <div className="flex justify-between px-[10%] items-center sm:hidden">
+
+                            <div className="">
+                                <Link href="/">
+                                    <ApplicationLogo
+                                        className='block w-auto'/>
+                                </Link>
+                            </div>
+
                             <button
                                 onClick={() =>
-                                    setShowingNavigationDropdown(
-                                        (previousState) => !previousState,
-                                    )
+                                    setShowingNavigationDropdown((previousState) => !previousState)
                                 }
-                                className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-100 hover:text-gray-500 focus:bg-gray-100 focus:text-gray-500 focus:outline-none"
+                                className="inline-flex items-center justify-center rounded-md p-3 text-white"
                             >
                                 <svg
                                     className="h-6 w-6"
