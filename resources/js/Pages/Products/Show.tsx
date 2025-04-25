@@ -14,13 +14,13 @@ export default function Show({product}: { product: Product }) {
             <div className="py-[30px]">
                 <div className="mx-auto w-4/5">
 
-                    <div className="flex gap-[30px]">
+                    <div className="block sm:flex gap-[30px]">
                         <div>
-                            <img className="rounded w-fit" src={'/storage/img.png'} alt=""/>
+                            <img className="rounded w-full" src={'/storage/img.png'} alt=""/>
                         </div>
 
                         <div className="flex-1">
-                            <h5 className="text-2xl text-kabi-black font-bold uppercase">{product.name}</h5>
+                            <h5 className="mt-4 sm:mt-0 text-2xl text-kabi-black font-bold uppercase">{product.name}</h5>
                             <h6 className="text-xl text-kabi-gray">{product.subtitle}</h6>
                             <p className="text-xs text-kabi-gray whitespace-pre-wrap mt-5">
                                 {product.description}
