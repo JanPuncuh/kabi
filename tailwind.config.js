@@ -27,11 +27,10 @@ export default {
             borderRadius: {
                 DEFAULT: '5px',
             },
+            screens: {
+                sm: '500px'
+            }
         },
-        screens: {
-            'sm': '500px',
-            // => @media (min-width: 500px) { ... }
-        }
     },
 
     plugins: [forms],

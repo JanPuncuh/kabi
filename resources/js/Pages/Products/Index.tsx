@@ -11,8 +11,8 @@ export default function Index({products}: { products: Product[] }) {
             <div className="py-[30px]">
                 <div className="mx-auto w-4/5">
 
-                    <div className="grid grid-cols-3 gap-8">
-                        {products.slice(0, 3).map((product) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        {products.map((product) => (
                             <ProductCard product={product} key={product.id}/>
                         ))}
                     </div>
