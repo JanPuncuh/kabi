@@ -1,11 +1,11 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import Layout from '@/Layouts/Layout';
 import {Head} from '@inertiajs/react';
 import {Product} from "@/types";
 import ProductCard from "@/Components/ProductCard";
 
 export default function Index({products}: { products: Product[] }) {
     return (
-        <AuthenticatedLayout>
+        <Layout>
             <Head title="Izdelki"/>
 
             <div className="py-[30px]">
@@ -18,6 +18,6 @@ export default function Index({products}: { products: Product[] }) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </Layout>
     );
 }

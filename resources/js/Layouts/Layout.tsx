@@ -6,10 +6,9 @@ import {PropsWithChildren, ReactNode, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHouse} from "@fortawesome/free-solid-svg-icons";
 
-export default function Authenticated({
-    header,
+export default function Layout({
     children,
-}: PropsWithChildren<{ header?: ReactNode }>) {
+}: PropsWithChildren) {
 
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
@@ -29,7 +28,7 @@ export default function Authenticated({
                     <div
                         className="py-3 sm:py-0 sm:border-t-[3px] sm:border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] sm:rounded">
 
-                        <div className="hidden sm:-my-px sm:flex ms-5">
+                        <div className="hidden sm:flex ms-5">
                             <NavLink
                                 className="ps-0"
                                 href="#"
@@ -117,31 +116,27 @@ export default function Authenticated({
                     }
                 >
                     <ResponsiveNavLink
-                        href={route('dashboard')}
-                        active={route().current('dashboard')}
+                        href='#'
                     >
                         Domov
                     </ResponsiveNavLink>
                     <ResponsiveNavLink
-                        href={route('dashboard')}
-                        active={route().current('dashboard')}
+                        href='#'
                     >
                         O nas
                     </ResponsiveNavLink>
                     <ResponsiveNavLink
-                        href={route('dashboard')}
-                        active={route().current('dashboard')}
+                        href='#'
                     >
                         Kontakt
                     </ResponsiveNavLink>
                     <ResponsiveNavLink
-                        href={route('dashboard')}
-                        active={route().current('dashboard')}
+                        href='#'
                     >
                         Pišite nam
                     </ResponsiveNavLink>
                     <ResponsiveNavLink
-                        href={route('dashboard')}
+                        href={route('product.index')}
                         active={route().current()!.includes('product')}
                     >
                         Izdelki

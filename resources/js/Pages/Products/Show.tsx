@@ -1,4 +1,4 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import Layout from '@/Layouts/Layout';
 import {Head} from '@inertiajs/react';
 import {Product} from "@/types";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import ProductLink from "@/Components/ProductLink";
 export default function Show({product}: { product: Product }) {
 
     return (
-        <AuthenticatedLayout>
+        <Layout>
             <Head title={product.name}/>
 
             <div className="py-[30px]">
@@ -43,6 +43,6 @@ export default function Show({product}: { product: Product }) {
 
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </Layout>
     );
 }
