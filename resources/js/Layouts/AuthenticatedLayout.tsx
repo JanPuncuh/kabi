@@ -10,7 +10,6 @@ export default function Authenticated({
     header,
     children,
 }: PropsWithChildren<{ header?: ReactNode }>) {
-    const user = usePage().props.auth.user;
 
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
@@ -30,42 +29,36 @@ export default function Authenticated({
                     <div
                         className="py-3 sm:py-0 sm:border-t-[3px] sm:border-[#ABE5FF] bg-gradient-to-b from-[#48C6EF] to-[#6F86D6] sm:rounded">
 
-                        <div className="hidden sm:-my-px sm:flex ms-4">
-                                <div>
-                                    <FontAwesomeIcon className="text-white/[0.24]" icon={faHouse} />
-                                    <NavLink
-                                        className="ps-[10px]"
-                                        href="#"
-                                        active={route().current('dashboard')}
-                                    >
-                                        Domov
-                                    </NavLink>
-                                </div>
-                                <NavLink
-                                    href="#"
-                                    active={route().current('dashboard')}
-                                >
-                                    O nas
-                                </NavLink>
-                                <NavLink
-                                    href="#"
-                                    active={route().current('dashboard')}
-                                >
-                                    Kontakt
-                                </NavLink>
-                                <NavLink
-                                    href="#"
-                                    active={route().current('dashboard')}
-                                >
-                                    Pišite nam
-                                </NavLink>
-                                <NavLink
-                                    href={route('product.index')}
-                                    active={route().current()!.includes('product')}
-                                >
-                                    Izdelki
-                                </NavLink>
-                            </div>
+                        <div className="hidden sm:-my-px sm:flex ms-5">
+                            <NavLink
+                                className="ps-0"
+                                href="#"
+                            >
+                                <FontAwesomeIcon className="text-white/[0.24] me-[10px]" icon={faHouse}/>
+                                Domov
+                            </NavLink>
+                            <NavLink
+                                href="#"
+                            >
+                                O nas
+                            </NavLink>
+                            <NavLink
+                                href="#"
+                            >
+                                Kontakt
+                            </NavLink>
+                            <NavLink
+                                href="#"
+                            >
+                                Pišite nam
+                            </NavLink>
+                            <NavLink
+                                href={route('product.index')}
+                                active={route().current()!.includes('product')}
+                            >
+                                Izdelki
+                            </NavLink>
+                        </div>
 
                         <div className="flex justify-between px-[10%] items-center sm:hidden">
 
@@ -119,52 +112,42 @@ export default function Authenticated({
 
                 <div
                     className={
-                        (showingNavigationDropdown ? 'block' : 'hidden') +
+                        (showingNavigationDropdown ? 'block bg-white' : 'hidden') +
                         ' sm:hidden'
                     }
                 >
-                    <div className="space-y-1 pb-3 pt-2">
-                        <ResponsiveNavLink
-                            href={route('dashboard')}
-                            active={route().current('dashboard')}
-                        >
-                            Dashboard
-                        </ResponsiveNavLink>
-                    </div>
-
-                    <div className="border-t border-gray-200 pb-1 pt-4">
-                        <div className="px-4">
-                            <div className="text-base font-medium text-gray-800">
-                                {user.name}
-                            </div>
-                            <div className="text-sm font-medium text-gray-500">
-                                {user.email}
-                            </div>
-                        </div>
-
-                        <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink href={route('profile.edit')}>
-                                Profile
-                            </ResponsiveNavLink>
-                            <ResponsiveNavLink
-                                method="post"
-                                href={route('logout')}
-                                as="button"
-                            >
-                                Log Out
-                            </ResponsiveNavLink>
-                        </div>
-                    </div>
+                    <ResponsiveNavLink
+                        href={route('dashboard')}
+                        active={route().current('dashboard')}
+                    >
+                        Domov
+                    </ResponsiveNavLink>
+                    <ResponsiveNavLink
+                        href={route('dashboard')}
+                        active={route().current('dashboard')}
+                    >
+                        O nas
+                    </ResponsiveNavLink>
+                    <ResponsiveNavLink
+                        href={route('dashboard')}
+                        active={route().current('dashboard')}
+                    >
+                        Kontakt
+                    </ResponsiveNavLink>
+                    <ResponsiveNavLink
+                        href={route('dashboard')}
+                        active={route().current('dashboard')}
+                    >
+                        Pišite nam
+                    </ResponsiveNavLink>
+                    <ResponsiveNavLink
+                        href={route('dashboard')}
+                        active={route().current()!.includes('product')}
+                    >
+                        Izdelki
+                    </ResponsiveNavLink>
                 </div>
             </nav>
-
-            {header && (
-                <header className="bg-white shadow">
-                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        {header}
-                    </div>
-                </header>
-            )}
 
             <main>{children}</main>
         </div>
