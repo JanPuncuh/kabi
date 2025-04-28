@@ -23,13 +23,13 @@ export default function ProductCard({
                     <img className="w-full" src={'/storage/img.png'} alt=""/>
                 </div>
 
-                <div className="px-[30px] py-5">
+                <div className="h-96 px-[30px] py-5">
 
                     <h5 className="text-2xl text-kabi-black font-bold uppercase">{product.name}</h5>
 
                     <h6 className="text-xl text-kabi-gray">{product.subtitle}</h6>
 
-                    <p className="mt-5 text-xs line-clamp-[15] text-kabi-gray whitespace-pre-wrap">
+                    <p className="mt-5 text-xs line-clamp-[14] text-kabi-gray whitespace-pre-wrap">
                         {product.description}
                         {/*{'Odstavek 1. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.\n' +*/}
                         {/*    '\n' +*/}

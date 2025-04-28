@@ -21,7 +21,7 @@ class ProductFactory extends Factory
         return [
             'name' => "Izdelek $fakeWord",
             'subtitle' => "Podnaslov izdelka $fakeWord",
-            'description' => $this->faker->paragraphs(3, true),
+            'description' => $this->faker->paragraphs(rand(1,4), true),
         ];
     }
 }
